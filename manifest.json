@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "tum-video-download-chrome",
+  "name": "tum-lecture-download",
   "description": "Download recorded lectures",
   "version": "1.0",
   "background": {
