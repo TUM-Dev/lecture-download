@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="static/css/normalize.css">
+    <link rel="stylesheet" href="static/css/skeleton.css">
+
+    <style media="screen">
+    html, body {
+      --popup-width:  300px !important;
+      --popup-height: 270px !important;
+
+      min-width:  var(--popup-width);
+      min-height: var(--popup-height);
+
+      max-width:  var(--popup-width);
+      max-height: var(--popup-height);
+    }
+    button.downloadButton {
+      width: 100%;
+    }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="four columns">
+          <p id="text" style="background-color: red"></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="one column">
+          <form>
+            <label for="lectureNameInput">Name</label>
+            <input class="u-full-width" type="text" placeholder="" id="lectureNameInput">
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="one column">
+          <button class="downloadButton" tag="0">Download slides</button>
+          <button class="downloadButton" tag="1">Download slides + speaker</button>
+        </div>
+      </div>
+
+    </div>
+    <script type="text/javascript" src="popup.js"></script>
+  </body>
+</html>
