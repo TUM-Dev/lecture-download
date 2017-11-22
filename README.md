@@ -1,4 +1,4 @@
-# tum-lecture-download
+# tum-lecture-download [![](https://img.shields.io/chrome-web-store/v/jlbncgdbgjgdimjnihmniommnbhddajf.svg)](https://chrome.google.com/webstore/detail/tum-lecture-download/jlbncgdbgjgdimjnihmniommnbhddajf)
 
 > Download recorded lectures from streams.tum.de
 
