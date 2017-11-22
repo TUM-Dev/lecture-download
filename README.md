@@ -2,7 +2,13 @@
 
 > Download recorded lectures from streams.tum.de
 
-<br>
+## Install
+
+[⬇️ Get the Chrome extension](https://chrome.google.com/webstore/detail/tum-lecture-download/jlbncgdbgjgdimjnihmniommnbhddajf)
+
+<br/>
+
+## Usage
 
 ![](https://files.lukaskollmer.me/embed/tum-lecture-download.png)
 
