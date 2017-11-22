@@ -6,7 +6,6 @@
 
 [⬇️ Get the Chrome extension](https://chrome.google.com/webstore/detail/tum-lecture-download/jlbncgdbgjgdimjnihmniommnbhddajf)
 
-<br/>
 
 ## Usage
 
