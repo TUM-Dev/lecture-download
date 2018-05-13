@@ -9,7 +9,7 @@
 
 ## Usage
 
-![](https://files.lukaskollmer.me/embed/tum-lecture-download.png)
+![](https://s3.amazonaws.com/lukaskollmer/embed/tum-lecture-download.png)
 
 
 
