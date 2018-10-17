@@ -1,21 +1,20 @@
-// Set the extension icon active on all tum.de domains
 
-// When the extension is installed or upgraded ...
-chrome.runtime.onInstalled.addListener(function() {
-  // Replace all rules ...
-  chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-    // With a new rule ...
-    chrome.declarativeContent.onPageChanged.addRules([
-      {
-        // That fires for tum.de domains
-        conditions: [
-          new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: { hostContains: 'tum.de' },
-          })
-        ],
-        // And shows the extension's page action.
-        actions: [ new chrome.declarativeContent.ShowPageAction() ]
-      }
-    ]);
+const pageStateMatcherForHost = host => {
+  return new chrome.declarativeContent.PageStateMatcher({
+    pageUrl: { hostEquals: host }
+  });
+};
+
+// Whenever the extension is installed or updated, we replace all old rules w/ a new one,
+// which enables the page action on all matching hosts
+
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.declarativeContent.onPageChanged.removeRules(undefined, () => {
+    chrome.declarativeContent.onPageChanged.addRules([{
+      conditions: [
+          'streams.tum.de', 'www.lecturio.de'
+      ].map(pageStateMatcherForHost),
+      actions: [ new chrome.declarativeContent.ShowPageAction() ]
+    }]);
   });
 });
