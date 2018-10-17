@@ -3,7 +3,7 @@
 > Download lecture recordings from streams.tum.de and lecturio
 
 ## Install
-[⬇️ Get the Chrome extension](https://chrome.google.com/webstore/detail/tum-lecture-download/jlbncgdbgjgdimjnihmniommnbhddajf)
+[![](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/tum-lecture-download/jlbncgdbgjgdimjnihmniommnbhddajf)
 
 
 ## Usage
