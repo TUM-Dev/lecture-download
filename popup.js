@@ -8,10 +8,13 @@ const contentScripts = {
 
 const data = {};
 
+const invalidFilenameCharacters = ['/', ':', '?', '~', '<', '>', '*', '|'];
+const createFilenameRegex = () => new RegExp(invalidFilenameCharacters.join('|\\'), 'g');
+
 chrome.runtime.onConnect.addListener(port => {
   port.onMessage.addListener((message, sender) => {
     data.videoUrls = message.videoUrls
-    data.initialFilename = message.title.replace(/\//g, '-');
+    data.initialFilename = message.title.replace(createFilenameRegex(), '_');
     document.getElementById('lectureNameInput').value = data.initialFilename;
   });
 });
