@@ -9,7 +9,7 @@
     <style media="screen">
     html, body {
       --popup-width:  300px !important;
-      --popup-height: 270px !important;
+      --popup-height: 250px !important;
 
       min-width:  var(--popup-width);
       min-height: var(--popup-height);
@@ -17,7 +17,7 @@
       max-width:  var(--popup-width);
       max-height: var(--popup-height);
     }
-    button.downloadButton {
+    button {
       width: 100%;
     }
     </style>
@@ -42,8 +42,19 @@
 
       <div class="row">
         <div class="one column">
-          <button class="downloadButton button-primary" tag="0">Download</button>
-          <button class="downloadButton" tag="1">Download all</button>
+          <button id="btn-download" class="button-primary">Download</button>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="one column">
+          <div style="position:relative">
+            <div style="position: absolute; right: 0px;">
+                <a id="btn-feedback" href="#">Feedback</a>
+            </div>
+          </div>
         </div>
       </div>
 

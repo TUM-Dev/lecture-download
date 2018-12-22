@@ -25,7 +25,7 @@ export function script_lecturio() {
     const port = chrome.runtime.connect(chrome.runtime.id);
     port.postMessage({
       title: `${lectureName} - ${courseName}`,
-      videoUrls: [filterHdUrl(event.data)]
+      url: filterHdUrl(event.data)
     });
   }, false);
 

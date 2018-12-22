@@ -16,6 +16,7 @@
   "permissions" : [
     "declarativeContent",
     "tabs",
+    "cookies",
     "<all_urls>",
     "downloads"
   ],
