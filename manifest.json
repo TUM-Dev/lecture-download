@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "tum-lecture-download",
   "description": "Download lecture recordings from streams.tum.de and lecturio",
-  "version": "2018.12.22",
+  "version": "2019.05",
   "background": {
     "scripts": ["background.js"],
     "persistent": false
@@ -17,8 +17,9 @@
     "declarativeContent",
     "tabs",
     "cookies",
-    "<all_urls>",
-    "downloads"
+    "downloads",
+    "*://streams.tum.de/*",
+    "*://www.lecturio.de/*"
   ],
   "icons" : {
     "147" : "static/images/icon.png"
