@@ -5,14 +5,14 @@ const GITHUB_URL = 'https://github.com/TUM-Dev/lecture-download';
 
 const data = {
   title: null,
-  url: null
+  urls: null
 };
 
 const invalidFilenameCharacters = ['/', ':', '?', '~', '<', '>', '*', '|'];
 const createFilenameRegex = () => new RegExp(invalidFilenameCharacters.join('|\\'), 'g');
 
-const handleVideoData = ({title, url}) => {
-  data.url = url;
+const handleVideoData = ({title, urls}) => {
+  data.urls = urls;
 
   if (title !== null) {
     data.title = title.replace(createFilenameRegex(), '_');
@@ -25,7 +25,7 @@ chrome.tabs.query({active: true, currentWindow: true}, tabs => {
   const tab = tabs[0];
   const url = new URL(tab.url);
 
-  handleVideoData({url: null, title: tab.title});
+  handleVideoData({urls: null, title: tab.title});
 
   if (url.host === 'streams.tum.de') {
     script_tum(url, handleVideoData);
@@ -51,10 +51,17 @@ chrome.tabs.query({active: true, currentWindow: true}, tabs => {
 const main = () => {
   document.getElementById('btn-download').addEventListener('click', event => {
     const filename = document.getElementById('lectureNameInput').value;
-    chrome.downloads.download({
-      filename: `${filename}.mp4`,
-      url: data.url
-    });
+
+    for (let i = 0; i < data.urls.length; i++) {
+      const destName = data.urls.length > 1
+        ? `${filename}_${i}.mp4`
+        : `${filename}.mp4`;
+
+        chrome.downloads.download({
+          filename: destName,
+          url: data.urls[i]
+        });
+    }
   });
   
   document.getElementById('btn-feedback').addEventListener('click', event => {

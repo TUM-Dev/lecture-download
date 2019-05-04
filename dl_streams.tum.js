@@ -33,12 +33,13 @@ export function script_tum(currentTabUrl, callback) {
     })
       .then(response => response.json())
       .then(json => {
-        const videoUrls = json['d']['Presentation']['Streams'][0]['VideoUrls'];
-        let mp4Url = firstWhere(videoUrls, ({Location}) => Location.includes('.mp4')).Location;
+        const videoUrls = json['d']['Presentation']['Streams'].map(stream => {
+          return firstWhere(stream['VideoUrls'], ({Location}) => Location.includes('.mp4')).Location;
+        });
         
         callback({
           title: null, // provided by the main extension script
-          url: mp4Url
+          urls: videoUrls
         });
       }).catch(err => console.log(err));
   });
