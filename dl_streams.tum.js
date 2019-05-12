@@ -33,8 +33,12 @@ export function script_tum(currentTabUrl, callback) {
     })
       .then(response => response.json())
       .then(json => {
-        const videoUrls = json['d']['Presentation']['Streams'].map(stream => {
-          return firstWhere(stream['VideoUrls'], ({Location}) => Location.includes('.mp4')).Location;
+        const videoUrls = json['d']['Presentation']['Streams'].flatMap(stream => {
+          if (Array.isArray(stream['VideoUrls']) && stream['VideoUrls'].length > 0) {
+            return firstWhere(stream['VideoUrls'], ({Location}) => Location.includes('.mp4')).Location;
+          } else {
+            return [];
+          }
         });
         
         callback({
