@@ -20,6 +20,12 @@
     button {
       width: 100%;
     }
+    form {
+      margin-bottom: 1.25rem;
+    }
+    #slides-notice {
+      display: none;
+    }
     </style>
   </head>
   <body>
@@ -46,15 +52,15 @@
         </div>
       </div>
 
-      <br>
-
       <div class="row">
         <div class="one column">
-          <div style="position:relative">
-            <div style="position: absolute; right: 0px;">
-                <a id="btn-feedback" href="#">Feedback</a>
-            </div>
-          </div>
+          <p id="slides-notice"><span id="slides-notice-text"></span> (<a id="btn-slides-info" href="#">info</a>)</p>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 2%">
+        <div class="one column">
+          <a href="#" id="btn-feedback">Feedback</a>
         </div>
       </div>
 
