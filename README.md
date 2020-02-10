@@ -1,9 +1,9 @@
-# tum-lecture-download [![](https://img.shields.io/chrome-web-store/v/jlbncgdbgjgdimjnihmniommnbhddajf.svg)](https://chrome.google.com/webstore/detail/tum-lecture-download/jlbncgdbgjgdimjnihmniommnbhddajf)
+# tum-lecture-download
 
 > Download lecture recordings from streams.tum.de and lecturio
 
 ## Install
-[![](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/tum-lecture-download/jlbncgdbgjgdimjnihmniommnbhddajf)
+[![](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/tum-lecture-download/jlbncgdbgjgdimjnihmniommnbhddajf) [![](https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_1.png)](https://addons.mozilla.org/en-US/firefox/addon/tum-lecture-download/)
 
 
 ## Usage
