@@ -1,5 +1,7 @@
 # tum-lecture-download
 
+# :warning: This repository is not active anymore. Feel free to use [github.com/Valentin-Metz/tum_video_scraper](https://github.com/Valentin-Metz/tum_video_scraper) :warning:
+
 > Download lecture recordings from streams.tum.de and lecturio
 
 ## Install
